@@ -167,5 +167,38 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 8,
+      name: '功能类-诊疗问答打开图片',
+      desc: '自动适应字数打开图片查看',
+      rules: [
+        {
+          key: 0,
+          fastQuery: true,
+          actionDelay: 5000, // 5s后点击图片
+          activityIds: '.article.qa.QASheetActivity',
+          matches:
+            'TextView - @Image[visibleToUser=true] <<3 View[childCount=4] > [text.length<30] <<n FrameLayout - [vid="toolbar"]',
+          snapshotUrls: 'https://i.gkd.li/i/25604101',
+          exampleUrls: [
+            'https://e.gkd.li/fed97c9c-a07d-4662-9ec7-79c801500ae1', // 点击前
+            'https://e.gkd.li/c4925112-02a7-47d4-a299-3980ec253741', // 点击后
+          ],
+        },
+        {
+          key: 1,
+          fastQuery: true,
+          actionDelay: 10000, // 10s后点击图片
+          activityIds: '.article.qa.QASheetActivity',
+          matches:
+            'TextView - @Image[visibleToUser=true] <<3 View[childCount=4] > [text.length<160] <<n FrameLayout - [vid="toolbar"]',
+          snapshotUrls: 'https://i.gkd.li/i/25604911',
+          exampleUrls: [
+            'https://e.gkd.li/77abd36e-aaa5-44f7-b534-e9a7e97752ca', // 点击前
+            'https://e.gkd.li/3af7ba08-0597-4235-9299-fb9e32d3e164', // 点击后
+          ],
+        },
+      ],
+    },
   ],
 });
