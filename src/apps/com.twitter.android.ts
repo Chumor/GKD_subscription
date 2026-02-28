@@ -202,7 +202,7 @@ export default defineGkdApp({
       rules: [
         {
           fastQuery: true,
-          actionDelay: 1000, //防止[译文]节点未加载完导致重复点击 [翻译]
+          actionCd: 2000, //防止[译文]节点未加载完导致重复点击 [翻译]
           activityIds: 'com.twitter.tweetdetail.TweetDetailActivity',
           matches:
             '[vid="translation_link" || vid="grok_translation_link"][clickable=true][index=parent.childCount.minus(1)]',
