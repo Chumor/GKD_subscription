@@ -89,7 +89,7 @@
 
 ## 🥇感谢以下开发者的贡献
 
-![img](https://contrib.rocks/image?repo=Lin-arm/GKD_subscription&_v={{VERSION}})
+![img](https://contrib.rocks/image?repo=Lin-arm/GKD_subscription&max=200&_v={{VERSION}})
 
 ## 📈Star History
 
