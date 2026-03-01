@@ -37,38 +37,38 @@
 
 - CloudFlare源 (国内推荐)
 
-```txt
-https://gkd-subscription-667.pages.dev/gkd.json5
-```
+  ```txt
+  https://gkd-subscription-667.pages.dev/gkd.json5
+  ```
 
 - GitHub源
 
-```txt
-https://raw.githubusercontent.com/Lin-arm/GKD_subscription/main/dist/gkd.json5
-```
+  ```txt
+  https://raw.githubusercontent.com/Lin-arm/GKD_subscription/main/dist/gkd.json5
+  ```
 
 <details>
 <summary>☢️ 备用源</summary>
 
 - jsdelivr源 (国内可用但可能不稳定,更新滞后24h)
 
-```txt
-https://cdn.jsdelivr.net/gh/Lin-arm/GKD_subscription@main/dist/gkd.json5
-```
+  ```txt
+  https://cdn.jsdelivr.net/gh/Lin-arm/GKD_subscription@main/dist/gkd.json5
+  ```
 
 - bgithub源 (国内可用,同步及时30min内,但可能随时挂掉！)
 
-```txt
-https://raw.bgithub.xyz/Lin-arm/GKD_subscription/main/dist/gkd.json5
-```
+  ```txt
+  https://raw.bgithub.xyz/Lin-arm/GKD_subscription/main/dist/gkd.json5
+  ```
 
 </details>
 
-- 当前版本: v423
-
-- 当前订阅文件已适配 897 个应用，共有 2127 应用规则组，3 全局规则组
-
-- 查看 [适配 APP 列表](./dist/README.md)
+> 当前版本: v423
+> 
+> 当前订阅文件已适配 897 个应用，共有 2127 应用规则组，3 全局规则组
+> 
+> 查看 [适配 APP 列表](./dist/README.md)
 
 ## 🌈其他
 
