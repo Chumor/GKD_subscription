@@ -103,7 +103,7 @@ export default defineGkdApp({
     },
     {
       key: 4,
-      name: '功能类-勾选[已了解此应用未经检测，可能存在风险]',
+      name: '功能类-勾选[已了解应用风险检测结果]',
       fastQuery: true,
       activityIds: ['.PackageInterceptActivity', '.PackageInstallerActivity'],
       rules: [
@@ -118,8 +118,12 @@ export default defineGkdApp({
         },
         {
           preKeys: [0],
-          matches: '@LinearLayout[clickable=true][id=null] > [text="继续安装"]',
+          matches: '@LinearLayout[clickable=true][id=null] > [text="继续安装"]', // 未知原因[text="继续安装"]无障碍反应慢，但测试发现使用自动化又没有延迟问题就先不改了
           snapshotUrls: 'https://i.gkd.li/i/22870985',
+          exampleUrls: [
+            'https://e.gkd.li/0e10235e-c253-460b-b0e5-0a1afdd418a9', // 自动化
+            'https://e.gkd.li/13d7bb9d-d715-4f35-b2e2-bbedb534f19c', // 传统无障碍
+          ],
         },
       ],
     },
