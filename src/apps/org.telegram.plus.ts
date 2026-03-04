@@ -27,11 +27,12 @@ export default defineGkdApp({
         {
           fastQuery: true,
           matches:
-            '[text^="保存" || text^="Save"] < * +2 * > [text="这张图片" || text="这个媒体" || text="This photo"][clickable=true]',
+            '[text^="保存" || text^="Save"] < * +2 * > [text^="这" || text^="This"][clickable=true]',
           snapshotUrls: [
             'https://i.gkd.li/i/22945715', //图片
             'https://i.gkd.li/i/22945853', //视频
             'https://i.gkd.li/i/25730622', //This photo
+            'https://i.gkd.li/i/25742054', //This media
           ],
           exampleUrls: 'https://e.gkd.li/9225eb21-84e6-4baa-88c5-f5dc2230c111',
           activityIds: 'org.telegram.ui.LaunchActivity',
