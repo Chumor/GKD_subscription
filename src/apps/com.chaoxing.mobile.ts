@@ -6,7 +6,8 @@ export default defineGkdApp({
   groups: [
     {
       key: 1,
-      name: '功能类-提示没有网络时点击[重试/确定]',
+      name: '功能类-无网络时[重试/确定]',
+      desc: '提示没有网络时点击[重试/确定]',
       rules: [
         {
           fastQuery: true,
@@ -25,7 +26,8 @@ export default defineGkdApp({
     },
     {
       key: 2,
-      name: '功能类-提示非WIFI环境时点击[继续]，使用流量播放',
+      name: '功能类-[继续]使用流量播放',
+      desc: '提示非WIFI环境时点击[继续]',
       rules: [
         {
           fastQuery: true,
@@ -56,8 +58,8 @@ export default defineGkdApp({
       rules: [
         {
           activityIds: '.main.ui.MainTabActivity',
-          matches: '[id="com.chaoxing.mobile:id/vNotificationItemClose"]',
-          snapshotUrls: 'https://i.gkd.li/i/13197374',
+          matches: '[vid="vNotificationItemClose"]',
+          snapshotUrls: 'https://i.gkd.li/i/13197374', //旧快照
         },
       ],
     },
@@ -67,7 +69,7 @@ export default defineGkdApp({
       rules: [
         {
           fastQuery: true,
-          activityIds: 'com.chaoxing.mobile.webapp.ui.WebAppViewerActivity',
+          activityIds: '.webapp.ui.WebAppViewerActivity',
           matches:
             'TextView[text="登录"] < @View[clickable=true][desc="登录"] < * - * > View[childCount=0][text="电脑端学习通登录确认"] <<n [vid="web_view_fragment_refresh_layout"]',
           snapshotUrls: 'https://i.gkd.li/i/23280198',
