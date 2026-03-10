@@ -39,4 +39,4 @@
 
 [快速查询优化](./docs/fast-query.md)
 
-[关于 id 和 vid](./docs/id-vid.md)
+[id 和 vid 的区别](./docs/difference-between-id-and-vid.md)
