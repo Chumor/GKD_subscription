@@ -29,5 +29,19 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 2,
+      name: '功能类-自动测试连接',
+      desc: '启动成功测试代理连接情况',
+      rules: [
+        {
+          fastQuery: true,
+          activityIds: '.ui.MainActivity',
+          matches: '[vid="tv_test_state"][text$="点击测试连接"]',
+          snapshotUrls: 'https://i.gkd.li/i/26151342',
+          exampleUrls: 'https://e.gkd.li/d00b6cb2-b09c-4be8-8be6-e51df6903055',
+        },
+      ],
+    },
   ],
 });
