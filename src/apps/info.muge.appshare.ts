@@ -227,6 +227,15 @@ export default defineGkdApp({
           exampleUrls: 'https://e.gkd.li/b4d9d653-a4ad-4e4f-a8f5-30b1485547b5',
           snapshotUrls: 'https://i.gkd.li/i/15211765',
         },
+        {
+          key: 4,
+          fastQuery: true,
+          activityIds: '.MainActivity',
+          matches:
+            '@ImageView < FrameLayout - * >2 [text^="立即" || text$="详情" || text^="了解" || text="去微信看看" || text$="应用" || text="进入小程序" || text="领取优惠" || text="跳转微信"][visibleToUser=true]',
+          snapshotUrls: 'https://i.gkd.li/i/26151106',
+          exampleUrls: 'https://e.gkd.li/2fc699c4-e377-4a54-b798-17f831f5a9f7',
+        },
       ],
     },
     {
