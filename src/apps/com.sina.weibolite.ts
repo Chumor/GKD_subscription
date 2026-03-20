@@ -53,5 +53,20 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 3,
+      name: '局部广告-首页红小包',
+      desc: '首页右下角红小包-x掉',
+      rules: [
+        {
+          fastQuery: true,
+          activityIds: '.MainTabActivity',
+          matches:
+            '[vid="floating_window"] >2 [vid="complete_layout"][childCount=3][visibleToUser=true] + [vid="close"][clickable=true]',
+          snapshotUrls: 'https://i.gkd.li/i/26148211',
+          exampleUrls: 'https://e.gkd.li/eed48574-ccd7-470d-afa0-89d87e30f6e9',
+        },
+      ],
+    },
   ],
 });
