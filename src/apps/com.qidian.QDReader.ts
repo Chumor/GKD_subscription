@@ -36,14 +36,13 @@ export default defineGkdApp({
         {
           key: 1,
           activityIds: '.framework.widget.dialog.judian',
-          matches:
-            '[text$="新版本"] +2 * >2 [id="com.qidian.QDReader:id/cancel"]',
+          matches: '[text$="新版本"] +2 * >2 [vid="cancel"]',
           snapshotUrls: 'https://i.gkd.li/i/12641026',
         },
         {
           key: 2,
           activityIds: 'com.tencent.upgrade.ui.UpgradeDialogActivity',
-          matches: '[id="com.qidian.QDReader:id/upgrade_dialog_close_btn"]',
+          matches: '[vid="upgrade_dialog_close_btn"]',
           snapshotUrls: 'https://i.gkd.li/i/13116821',
         },
       ],
@@ -107,8 +106,7 @@ export default defineGkdApp({
         {
           key: 1,
           activityIds: 'com.afollestad.materialdialogs.MaterialDialog',
-          matches:
-            '@[id="com.qidian.QDReader:id/ivClose"] + [text^="开启推送"]',
+          matches: '@[vid="ivClose"] + [text^="开启推送"]',
           snapshotUrls: 'https://i.gkd.li/i/12640242',
         },
         {
@@ -130,7 +128,7 @@ export default defineGkdApp({
             '.ui.activity.QDBookDetailActivity',
             '.ui.activity.MainGroupActivity',
           ],
-          matches: '[id="com.qidian.QDReader:id/ivAdClose"]',
+          matches: '[vid="ivAdClose"]',
           snapshotUrls: [
             'https://i.gkd.li/i/12717032',
             'https://i.gkd.li/i/13459031',
@@ -171,10 +169,10 @@ export default defineGkdApp({
           fastQuery: true,
           activityIds: '.ui.activity.QDBrowserActivity',
           matches:
-            '@TextView[childCount=0][text$="知道了"][visibleToUser=true] <<n [id="com.qidian.QDReader:id/webViewContainer"]',
+            '@TextView[text$="知道了"][visibleToUser=true] < [index=parent.childCount.minus(1)] <n View < View - [id="app"] <<4 [vid="webViewContainer"]',
           exampleUrls: 'https://e.gkd.li/54f41a5a-1c71-4618-bdab-5335172ab7f5',
           snapshotUrls: [
-            'https://i.gkd.li/i/13606901', //v7.9.318 已失效，该版本的起点已无法看福利中心广告
+            // 'https://i.gkd.li/i/13606901', //v7.9.318 已失效，该版本的起点已无法看福利中心广告
             'https://i.gkd.li/i/22909666', //422
             'https://i.gkd.li/i/24339296', //428
           ],
@@ -189,8 +187,7 @@ export default defineGkdApp({
         {
           fastQuery: true,
           activityIds: '.ui.activity.hongbao_square.NewHongBaoSquareActivity',
-          matches:
-            '[id="com.qidian.QDReader:id/rootView"] > [id="com.qidian.QDReader:id/btnHongbaoClose"]',
+          matches: '[vid="rootView"] > [vid="btnHongbaoClose"]',
           snapshotUrls: 'https://i.gkd.li/i/13918466',
         },
       ],
