@@ -84,14 +84,15 @@ export default defineGkdApp({
           key: 1,
           matches: [
             '[text^="打开私信通知" || text="开启朋友的消息通知" || text="及时获得消息提醒" || text$="评论回复提醒"][visibleToUser=true]',
-            '[text="以后再说" || text="暂不开启" || text="禁止"][visibleToUser=true]',
+            '[text="以后再说" || text="暂不开启" || text="禁止" || text="取消"][visibleToUser=true]',
           ],
           snapshotUrls: [
-            'https://i.gkd.li/i/13669790', //这些开启通知请求形式全都不一样！
+            'https://i.gkd.li/i/13669790', //这些开启通知请求形式各不相同！
             'https://i.gkd.li/i/18417891',
             'https://i.gkd.li/i/18419574',
             'https://i.gkd.li/i/25024525',
             'https://i.gkd.li/i/25063241',
+            'https://i.gkd.li/i/26240394',
           ],
         },
       ],
