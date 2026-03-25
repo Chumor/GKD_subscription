@@ -12,8 +12,12 @@ export default defineGkdApp({
           key: 0,
           activityIds: '.MainActivity',
           matches:
-            '[text*="套餐限额"] + @View[clickable=true] > [desc="关闭"][visibleToUser=true]',
-          snapshotUrls: 'https://i.gkd.li/i/24996012',
+            'View[childCount=3] >2 [text="获取 Plus"][visibleToUser=true] < View[childCount=2] - @View[clickable=true] > [desc="关闭"]',
+          snapshotUrls: [
+            'https://i.gkd.li/i/24996012',
+            'https://i.gkd.li/i/24996012',
+          ],
+          exampleUrls: 'https://e.gkd.li/7c9669de-f7b9-48da-a0d0-cb296b68692b',
         },
       ],
     },
