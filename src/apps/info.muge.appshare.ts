@@ -122,7 +122,7 @@ export default defineGkdApp({
           fastQuery: true,
           activityIds: '.view.app.detail.AppDetailActivity',
           matches:
-            'FrameLayout[childCount=3] >3 [desc^="dislike"] > @View[clickable=true] <<n [id="info.muge.appshare:id/adContainer"]',
+            '@[clickable=true][width<100] < [desc^="dislike"] -2 * >3 [text="广告"][visibleToUser=true]',
           exampleUrls:
             'https://m.gkd.li/57941037/3bc12aa2-7673-4261-9e3d-7e1605b22847',
           snapshotUrls: 'https://i.gkd.li/i/13758909',
@@ -235,6 +235,15 @@ export default defineGkdApp({
             '@ImageView < FrameLayout - * >2 [text^="立即" || text$="详情" || text^="了解" || text="去微信看看" || text$="应用" || text="进入小程序" || text="领取优惠" || text="跳转微信"][visibleToUser=true]',
           snapshotUrls: 'https://i.gkd.li/i/26151106',
           exampleUrls: 'https://e.gkd.li/2fc699c4-e377-4a54-b798-17f831f5a9f7',
+        },
+        {
+          key: 5,
+          name: '应用详情弹窗-x掉',
+          fastQuery: true,
+          activityIds: 'com.byazt.fl.Stub_Standard_Activity_T',
+          matches:
+            '@ImageView[text=null][clickable=true] + [text="应用详情"][visibleToUser=true]',
+          snapshotUrls: 'https://i.gkd.li/i/26277526',
         },
       ],
     },
