@@ -6,14 +6,13 @@ export default defineGkdApp({
   groups: [
     {
       key: 1,
-      name: '功能类-自动显示[高级]信息',
-      desc: '文件传输自动显示更多信息',
+      name: '功能类-文件传输时自动点击[高级]',
       rules: [
         {
           fastQuery: true,
           activityIds: '.MainActivity',
-          matches:
-            '@Button[index=0] < View[childCount=2][desc*="%"][desc.length<20] - * <<5 [id="android:id/content"]',
+          actionCd: 5000,
+          matches: '[desc="高级"][clickable=true]',
           snapshotUrls: 'https://i.gkd.li/i/26321028',
           excludeSnapshotUrls: 'https://i.gkd.li/i/26314724', // 高级信息已显示
           exampleUrls: [
