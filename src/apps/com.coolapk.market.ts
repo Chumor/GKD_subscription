@@ -13,7 +13,7 @@ export default defineGkdApp({
       actionMaximumKey: 0,
       priorityTime: 10000,
       excludeActivityIds: [
-        '.view.search.', // 在搜索页面禁用
+        // '.view.search.', // 在搜索页面禁用
         '.view.feed.', // 在动态页面禁用
         '.view.node.DynamicNodePageActivity',
       ],
@@ -36,6 +36,7 @@ export default defineGkdApp({
         {
           key: 1,
           fastQuery: true,
+          excludeMatches: '[text*="搜索"]',
           matches:
             '[!(vid="item_view") && !(vid="card_view")] > [text*="跳过" || text*="Skip"][text.length<10][width<500 && height<300][visibleToUser=true]',
           snapshotUrls: [
@@ -43,9 +44,10 @@ export default defineGkdApp({
             'https://i.gkd.li/i/13211392',
             'https://i.gkd.li/i/23097140',
             'https://i.gkd.li/i/25498455', //Eng
+            'https://i.gkd.li/i/26328668', // .view.splash.SplashAdActivity
           ],
           excludeSnapshotUrls: [
-            'https://i.gkd.li/i/13247733',
+            'https://i.gkd.li/i/13247733', //搜索页 .view.splash.SplashAdActivity
             'https://i.gkd.li/i/13296816',
             'https://i.gkd.li/i/18245546',
           ],
