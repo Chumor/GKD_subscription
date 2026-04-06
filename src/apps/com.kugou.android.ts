@@ -52,7 +52,7 @@ export default defineGkdApp({
         {
           key: 1,
           fastQuery: true,
-          activityIds: ['.app.MediaActivity', '.app.MediaActivity'],
+          activityIds: '.app.MediaActivity',
           matches:
             '@ImageView[desc="关闭"][visibleToUser=true][clickable=true] <n ViewGroup < LinearLayout <(2,3) [id="android:id/list"]',
           snapshotUrls: [
