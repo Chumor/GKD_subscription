@@ -93,5 +93,20 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 12,
+      name: '功能类-自动完成普通签到',
+      desc: '普通签到无任何限制，点击即完成签到',
+      rules: [
+        {
+          fastQuery: true,
+          activityIds: '.webapp.ui.WebAppCommonViewer',
+          matches:
+            '[childCount=0] < [childCount=1] < @View[clickable=true][childCount=1] < WebView[text="签到"][childCount=1] < WebView[childCount=1] <2 [vid="web_view_fragment_refresh_layout"]',
+          snapshotUrls: 'https://i.gkd.li/i/26644134',
+          exampleUrls: 'https://e.gkd.li/efd48fc1-7575-43ea-a371-585fae266947',
+        },
+      ],
+    },
   ],
 });
