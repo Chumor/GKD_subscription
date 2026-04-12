@@ -17,38 +17,30 @@
 - **本仓库仅供学习交流使用**
 - **精力有限，随缘更新**
 
-## 📑说明
-
-- **致力于编写效率最高、误触最低、覆盖最全面的规则**
-
-- **已适配的规则需要等待发布更新才能生效，北京时间每天凌晨3点会自动发布更新，如果规则没有改动则不会发布更新，在 `GKD订阅界面` 下拉就能检测是否有更新 -> [点击查看更新日志](https://github.com/Lin-arm/GKD_subscription/releases)**
-
-- **仅启用 `开屏广告` 一类规则，其它所有规则均需用户手动打开，规则类别里可以批量开启某一类规则，建议按需开启规则，不要无脑开启规则，开启过多规则可能造成规则阻塞从而导致规则触发缓慢甚至不触发，并且规则开启越多耗电也越多 -> [点击查看耗电说明](https://gkd.li/guide/faq#power)**
-
-- **请求适配或报告问题 -> [点击反馈](https://github.com/Lin-arm/GKD_subscription/issues/new/choose)**
-
-- **交流讨论（不要在这里反馈） -> [点击查看或开启讨论](https://github.com/Lin-arm/GKD_subscription/discussions)**
-
-- **欢迎贡献规则，提交pr前请确认您已仔细阅读 [贡献指南](./CONTRIBUTING.md) 和 [API文档](https://gkd.li/api/)，规则编写可参考 [个人收集的通用规则以及适用场景](./docs/Selectors.md)**
-
 ## 🚀订阅
 
-复制以下任意一个链接到 GKD 即可使用本订阅规则
+选择适合你的订阅源，复制到 GKD 订阅的右下角 **+** 号那里导入，即可使用
 
-- CloudFlare源 (国内推荐)
+- 感谢由 CXPLAY 提供域名的CF源 (国内可用)
+
+  ```txt
+  https://gkd667.vv.ax/gkd.json5
+  ```
+
+- CloudFlare源 (国内可用)
 
   ```txt
   https://gkd-subscription-667.pages.dev/gkd.json5
   ```
 
-- GitHub源
+- GitHub源 (国内需要魔法)
 
   ```txt
   https://raw.githubusercontent.com/Lin-arm/GKD_subscription/main/dist/gkd.json5
   ```
 
 <details>
-<summary>☢️ 备用源</summary>
+<summary>点击展开备用源</summary>
 
 - jsdelivr源 (国内可用但可能不稳定,更新滞后24h)
 
@@ -64,11 +56,25 @@
 
 </details>
 
-> 当前版本: v462
+<!-- > 当前版本: v462
 > 
 > 当前订阅文件已适配 926 个应用，共有 2230 应用规则组，3 全局规则组
 > 
-> 查看 [适配 APP 列表](./dist/README.md)
+> 查看 [适配 APP 列表](./dist/README.md) -->
+
+## 📑说明
+
+- **致力于编写效率最高、误触最低、覆盖最全面的规则**
+
+- **已适配的规则需要等待发布更新才能生效，北京时间每天凌晨3点会自动发布更新，如果规则没有改动则不会发布更新，在 `GKD订阅界面` 下拉就能检测是否有更新 -> [点击查看更新日志](https://github.com/Lin-arm/GKD_subscription/releases)**
+
+- **仅启用 `开屏广告` 一类规则，其它所有规则均需用户手动打开，规则类别里可以批量开启某一类规则，建议按需开启规则，不要无脑开启规则，开启过多规则可能造成规则阻塞从而导致规则触发缓慢甚至不触发，并且规则开启越多耗电也越多 -> [点击查看耗电说明](https://gkd.li/guide/faq#power)**
+
+- **请求适配或报告问题 -> [点击反馈](https://github.com/Lin-arm/GKD_subscription/issues/new/choose)**
+
+- **交流讨论（不要在这里反馈） -> [点击查看或开启讨论](https://github.com/Lin-arm/GKD_subscription/discussions)**
+
+- **欢迎贡献规则，提交pr前请确认您已仔细阅读 [贡献指南](./CONTRIBUTING.md) 和 [API文档](https://gkd.li/api/)，规则编写可参考 [个人收集的通用规则以及适用场景](./docs/Selectors.md)**
 
 ## 🌈其他
 
