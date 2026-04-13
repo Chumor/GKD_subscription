@@ -40,15 +40,16 @@ export default defineGkdApp({
     {
       key: 3,
       name: '全屏广告-红包弹窗',
+      fastQuery: true,
       rules: [
         {
-          fastQuery: true,
+          key: 0,
           activityIds: [
             'com.yxcorp.gifshow.HomeActivity',
             'com.yxcorp.plugin.search.SearchActivity',
           ],
           matches:
-            '@[clickable=true][index=parent.childCount.minus(1)] -(1,2) ViewGroup > [text="点击立得奖励" || text^="邀请" || text="红包"]',
+            '@[clickable=true][width<128][index=parent.childCount.minus(1)] -(1,2) ViewGroup > [text="点击立得奖励" || text^="邀请" || text="红包"]',
           exampleUrls:
             'https://m.gkd.li/101449500/f7bbd1db-f519-4ff9-96cb-4cb5b2f483a2',
           snapshotUrls: [
@@ -57,6 +58,14 @@ export default defineGkdApp({
             'https://i.gkd.li/i/25200787', //邀请新用户
             'https://i.gkd.li/i/26675794', //新人 红包
           ],
+          excludeSnapshotUrls: 'https://i.gkd.li/i/26678562', // 加 [width<128][index=parent.childCount.minus(1)] 排除
+        },
+        {
+          key: 1,
+          activityIds: 'com.yxcorp.gifshow.HomeActivity',
+          matches:
+            '@ImageView[clickable=true][width<107 && height<107][index=0] + TextView[text^="邀"][text$="红包"]',
+          snapshotUrls: 'https://i.gkd.li/i/26678562',
         },
       ],
     },
