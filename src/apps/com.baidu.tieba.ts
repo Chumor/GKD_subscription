@@ -75,6 +75,11 @@ export default defineGkdApp({
       name: '分段广告-信息流广告',
       desc: '关闭广告、直播推广',
       fastQuery: true,
+      activityIds: [
+        '.tblauncher.MainTabActivity',
+        '.pb.pb.main.PbActivity',
+        '.forum.ForumActivity',
+      ],
       rules: [
         {
           key: 0,
@@ -89,11 +94,6 @@ export default defineGkdApp({
         },
         {
           key: 1,
-          activityIds: [
-            '.forum.ForumActivity',
-            '.pb.pb.main.PbActivity',
-            '.tblauncher.MainTabActivity',
-          ],
           matches:
             '@FrameLayout[clickable=true][visibleToUser=true] < LinearLayout < RelativeLayout <3 LinearLayout < RelativeLayout + LinearLayout >2 [text$="广告"]',
           exampleUrls: 'https://e.gkd.li/3b2f0906-f620-4fda-a59f-334a9548836e',
@@ -124,11 +124,6 @@ export default defineGkdApp({
         },
         {
           key: 4,
-          activityIds: [
-            '.tblauncher.MainTabActivity',
-            '.pb.pb.main.PbActivity',
-            '.forum.ForumActivity',
-          ],
           matches:
             'ImageView[index=parent.childCount.minus(1)] < @[vid="obfuscated"][clickable=true] -n * < RelativeLayout + FrameLayout >n [text="广告"]',
           exampleUrls: [
@@ -151,17 +146,14 @@ export default defineGkdApp({
           exampleUrls: 'https://e.gkd.li/0d5fea40-44ac-4b47-8b3c-e8388640e37d',
           snapshotUrls: 'https://i.gkd.li/i/24541094',
         },
+
+        // 第二段
         {
+          key: 50,
           preKeys: [0, 1, 2, 3, 4, 5],
-          activityIds: [
-            '.tblauncher.MainTabActivity',
-            '.pb.pb.main.PbActivity',
-            '.forum.ForumActivity',
-          ],
-          anyMatches: [
+          name: '②点击[不感兴趣]', // 直接结束, 无需第三段
+          matches:
             '@View[clickable=true][visibleToUser=true] - [text^="选择不喜欢"]',
-            '[text="已经看过"][clickable=true]',
-          ],
           exampleUrls: [
             'https://e.gkd.li/67a159e7-59ea-45f6-909c-7a681c4d3838',
             'https://e.gkd.li/5f9ebe98-dfd1-41a4-bb93-b1a45aa00549',
@@ -170,8 +162,26 @@ export default defineGkdApp({
             'https://i.gkd.li/i/16595134',
             'https://i.gkd.li/i/16595511',
             'https://i.gkd.li/i/16595113',
+          ],
+        },
+        {
+          key: 51,
+          preKeys: [0, 1, 2, 3, 4, 5],
+          name: '②选一个[理由]',
+          matches:
+            '[text="已经看过" || text="广告重复" || text="不感兴趣"][clickable=true]',
+          snapshotUrls: [
             'https://i.gkd.li/i/26634661', // [已经看过]
           ],
+        },
+
+        // 第三段
+        {
+          key: 100,
+          preKeys: [51],
+          name: '③点击[确定]',
+          matches: '@[clickable=true] - [text^="已选"][text$="理由"]',
+          snapshotUrls: 'https://i.gkd.li/i/26934788',
         },
       ],
     },
