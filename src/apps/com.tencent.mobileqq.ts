@@ -119,16 +119,19 @@ export default defineGkdApp({
         },
         {
           preKeys: [0, 1],
+          name: '②点击[关闭]此条广告',
           activityIds: [
             'com.qzone.reborn.feedpro.activity.QzoneFriendFeedProActivity',
             '.activity.SplashActivity',
             '.guild.base.QPublicFragmentActivityForMainWebActivity',
           ],
-          matches: '@[clickable=true] >(1,2) [text="关闭此条广告"]',
+          matches:
+            '@[clickable=true] >(1,2) [text^="关闭"][text*="条"][text.length<10]',
           snapshotUrls: [
             'https://i.gkd.li/i/21947698',
             'https://i.gkd.li/i/24381598',
             'https://i.gkd.li/i/24406932',
+            'https://i.gkd.li/i/26953118', // 关闭这条
           ],
         },
       ],
