@@ -116,52 +116,38 @@ export default defineGkdApp({
     {
       key: 3,
       name: '分段广告-信息流广告',
-      desc: '长按"赞助"/"广告"标识的卡片-点"不感兴趣"',
+      desc: '①长按[赞助/广告]卡片 ②点击[不喜欢]',
       fastQuery: true,
       activityIds: '.index.v2.IndexActivityV2',
       rules: [
         {
           key: 0,
           action: 'longClick',
-          name: '①长按"赞助"/"广告"卡片',
+          name: '①长按[赞助/广告]卡片',
           excludeMatches: 'RecyclerView > LinearLayout > [text^="不喜欢"]',
           matches:
-            '@FrameLayout[clickable=true] > LinearLayout TextView[text="赞助"||text="广告"][visibleToUser=true]',
+            '@[longClickable=true] >(1,3) TextView[text="赞助" || text="广告"][visibleToUser=true]',
           snapshotUrls: [
             'https://i.gkd.li/i/13455503',
             'https://i.gkd.li/i/13470690',
-            'https://i.gkd.li/i/14392171', // 使用 excludeMatches 防止反复触发规则
+            'https://i.gkd.li/i/27015032',
+            'https://i.gkd.li/i/27015306',
+          ],
+          excludeSnapshotUrls: 'https://i.gkd.li/i/14392171', // 防止反复触发规则
+          exampleUrls: [
+            'https://e.gkd.li/255822f2-7f48-4b1e-83bd-50411727bd29',
+            'https://e.gkd.li/0034d36d-f3a3-4255-991f-c3d6c258c8ae',
           ],
         },
         {
-          key: 1,
-          action: 'longClick',
-          name: '①长按"广告"卡片_2',
+          preKeys: [0],
+          name: '②点击[不喜欢]',
           matches:
-            '@[childCount=4] > [vid="adsCoverImage"] +3 [vid="adsLogoText"][visibleToUser=true]',
-          snapshotUrls: 'https://i.gkd.li/i/27015032',
-          exampleUrls: 'https://e.gkd.li/255822f2-7f48-4b1e-83bd-50411727bd29',
-        },
-        {
-          key: 2,
-          action: 'longClick',
-          name: '①长按"广告"卡片_3',
-          matches:
-            '@[vid="card_view"] >3 [vid="tv_ad_desc"][visibleToUser=true]',
-          snapshotUrls: 'https://i.gkd.li/i/27015306',
-          exampleUrls: 'https://e.gkd.li/0034d36d-f3a3-4255-991f-c3d6c258c8ae',
-        },
-        {
-          preKeys: [0, 1, 2],
-          name: '②点"不感兴趣"',
-          anyMatches: [
-            'RecyclerView > @LinearLayout[index=0] > TextView[text^="不喜欢"]',
-            'ViewGroup > @[childCount=2] > TextView[text="不喜欢"][visibleToUser=true]',
-          ],
+            '@[clickable=true] > TextView[text^="不喜欢"][text!*="作者"][visibleToUser=true]',
           snapshotUrls: [
             'https://i.gkd.li/i/13455500',
-            'https://i.gkd.li/i/14392187',
-            'https://i.gkd.li/i/26647708', // 新版本
+            'https://i.gkd.li/i/14392187', // [text!*="作者"]
+            'https://i.gkd.li/i/26647708',
           ],
           exampleUrls: [
             'https://e.gkd.li/cbf948c2-8a78-42a2-911d-c2369aaeff7d',
