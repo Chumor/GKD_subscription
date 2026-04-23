@@ -84,7 +84,7 @@ export default defineGkdApp({
           key: 4,
           matchRoot: true,
           matches:
-            '@View[clickable=true][width<174][height<174] -(2,4,5) TextView[text="广告" || (text.length>9 && getChild(0).name$="ImageView")] <n ScrollView < View < DetachableComposeView <<(14,16) FrameLayout <(2,4,5) [id="android:id/content"]',
+            '@View[clickable=true][width<174][height<174] -(2,4,5) TextView[text="广告" || (text.length>9 && getChild(0).name$="ImageView")] <n ScrollView < View < DetachableComposeView <<(14,16) FrameLayout <(2,3,4,5) [id="android:id/content"]',
           exampleUrls: 'https://e.gkd.li/1d81db1b-a722-4800-b6b7-4e5edb470984',
           snapshotUrls: [
             // 个人中心页
@@ -92,6 +92,7 @@ export default defineGkdApp({
             'https://i.gkd.li/i/21152859',
             'https://i.gkd.li/i/23599723', // text.length>9 && getChild(0).name$="ImageView"
             'https://i.gkd.li/i/23625826',
+            'https://i.gkd.li/i/27021826',
           ],
         },
         {
