@@ -161,7 +161,7 @@ export default defineGkdApp({
         {
           key: 0,
           matches:
-            '@LinearLayout[clickable=true] +(7,8) LinearLayout > [text="评论"][visibleToUser=true]',
+            '[text="签到领会员" || text="听歌领VIP"] < @LinearLayout[clickable=true] +(7,8) LinearLayout > [text="评论"][visibleToUser=true]',
           snapshotUrls: [
             'https://i.gkd.li/i/16554695',
             'https://i.gkd.li/i/26031429',
