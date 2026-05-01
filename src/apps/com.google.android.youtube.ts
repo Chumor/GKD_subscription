@@ -104,7 +104,7 @@ export default defineGkdApp({
           activityIds:
             'com.google.android.apps.youtube.app.watchwhile.MainActivity',
           matches:
-            '@[desc^="翻译成"||desc^="Translate to"][clickable=true][visibleToUser=true] -n [desc^="@"] <<(3,5) ViewGroup <n [vid="results" || vid="section_list"]',
+            '@[desc^="翻译成"||desc^="Translate to"][visibleToUser=true] <n [childCount>3] <<(2,4) ViewGroup <n [vid="results" || vid="section_list"]',
           exampleUrls: 'https://e.gkd.li/e9d6eaa8-9fbf-4b16-8f0c-50239597c687',
           snapshotUrls: [
             'https://i.gkd.li/i/17068544', // 翻译前
