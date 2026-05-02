@@ -1021,9 +1021,26 @@ export default defineGkdApp({
           fastQuery: true,
           activityIds: '.ui.chatting.TextPreviewUI',
           matches:
-            'TextView[visibleToUser=true] < * < ScrollView + @LinearLayout[clickable=true] <<n [id="android:id/content"]',
+            '@LinearLayout[clickable=true] - * ->2 TextView[visibleToUser=true] < * < ScrollView < * < * < * < [id="android:id/content"]',
           snapshotUrls: 'https://i.gkd.li/i/26310231',
           exampleUrls: 'https://e.gkd.li/9b2b5ed6-bf1d-4b13-aba5-b51e978df562',
+        },
+      ],
+    },
+    {
+      key: 50,
+      name: '功能类-语音通话时自动开[扬声器]',
+      desc: '⚠️ 1分钟内接听有效',
+      rules: [
+        {
+          fastQuery: true,
+          actionCd: 3000, // 太短会反复点击
+          forcedTime: 60000, // 若是从对方拨打过来,我方点击接听后的节点变化gkd感知不到
+          activityIds: '.plugin.voip.ui.VideoActivity',
+          matches:
+            '@Button[desc="扬声器已关"] <n View[childCount>8] < View < View < View < FrameLayout < FrameLayout < [id="android:id/content"]',
+          snapshotUrls: 'https://i.gkd.li/i/27175638',
+          excludeSnapshotUrls: 'https://i.gkd.li/i/27175665', // 扬声器已开
         },
       ],
     },

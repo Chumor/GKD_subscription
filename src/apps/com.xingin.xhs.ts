@@ -201,10 +201,11 @@ export default defineGkdApp({
             'com.xingin.matrix.detail.activity.DetailFeedActivity',
           ],
           matches:
-            '@[clickable=true] > [vid="loadMoreTV"][text^="展开"][text$="条回复"]',
+            '@[clickable=true] >(1,2) [vid="loadMoreTV"][text^="展开"][text$="条回复"]',
           snapshotUrls: [
-            'https://i.gkd.li/i/25048251',
+            'https://i.gkd.li/i/25048251', // 一层
             'https://i.gkd.li/i/25823242',
+            'https://i.gkd.li/i/27204200', // 两层
           ],
           exampleUrls: [
             'https://e.gkd.li/a211ebb1-2177-4264-9a60-280a5f8e2777',
@@ -259,7 +260,7 @@ export default defineGkdApp({
       desc: '适合观看细节场景需求',
       fastQuery: true,
       actionMaximum: 1,
-      actionCd: 1000, // 界面稳定后执行
+      actionCd: 3000, // 界面稳定后执行
       activityIds: 'com.xingin.matrix.detail.activity.DetailFeedActivity',
       rules: [
         {
@@ -287,7 +288,7 @@ export default defineGkdApp({
       desc: '适合日常效率需求',
       fastQuery: true,
       actionMaximum: 1,
-      actionCd: 1000, // 界面稳定后执行
+      actionCd: 3000, // 界面稳定后执行
       activityIds: 'com.xingin.matrix.detail.activity.DetailFeedActivity',
       rules: [
         {
@@ -314,7 +315,7 @@ export default defineGkdApp({
       name: '功能类-自动倍速⏩x1.5⚠️五选一',
       fastQuery: true,
       actionMaximum: 1,
-      actionCd: 1000, // 界面稳定后执行
+      actionCd: 3000, // 界面稳定后执行
       activityIds: 'com.xingin.matrix.detail.activity.DetailFeedActivity',
       rules: [
         {
@@ -341,7 +342,7 @@ export default defineGkdApp({
       name: '功能类-自动倍速⏩x2.0⚠️五选一',
       fastQuery: true,
       actionMaximum: 1,
-      actionCd: 1000, // 界面稳定后执行
+      actionCd: 3000, // 界面稳定后执行
       activityIds: 'com.xingin.matrix.detail.activity.DetailFeedActivity',
       rules: [
         {
@@ -369,7 +370,7 @@ export default defineGkdApp({
       desc: 'Max效率需求',
       fastQuery: true,
       actionMaximum: 1,
-      actionCd: 1000, // 界面稳定后执行
+      actionCd: 3000, // 界面稳定后执行
       activityIds: 'com.xingin.matrix.detail.activity.DetailFeedActivity',
       rules: [
         {
@@ -441,10 +442,11 @@ export default defineGkdApp({
             'com.xingin.matrix.detail.activity.DetailFeedActivity',
           ],
           matches:
-            '@[clickable=true] > [vid="loadMoreTV"][text="展开更多回复"]',
+            '@[clickable=true] >(1,2) [vid="loadMoreTV"][text="展开更多回复"]',
           snapshotUrls: [
-            'https://i.gkd.li/i/25048251',
+            'https://i.gkd.li/i/25048251', // 一层
             'https://i.gkd.li/i/25823242',
+            'https://i.gkd.li/i/27204288', // 两层
           ],
           exampleUrls: [
             'https://e.gkd.li/a211ebb1-2177-4264-9a60-280a5f8e2777',
@@ -452,18 +454,19 @@ export default defineGkdApp({
         },
       ],
     },
-    {
-      key: 18,
-      name: '功能类-评论自动翻译',
-      rules: [
-        {
-          fastQuery: true,
-          activityIds: 'com.xingin.matrix.notedetail.NoteDetailActivity',
-          matches: '[text$="回复 翻译"][visibleToUser=true]',
-          snapshotUrls: 'https://i.gkd.li/i/26643975',
-          exampleUrls: 'https://e.gkd.li/fc8d70d4-f743-45df-a9d2-f343e419ccd9',
-        },
-      ],
-    },
+    // 存在`执行选择器`可用,但规则里就不可用问题
+    // {
+    //   key: 18,
+    //   name: '功能类-评论自动翻译',
+    //   rules: [
+    //     {
+    //       fastQuery: true,
+    //       activityIds: 'com.xingin.matrix.notedetail.NoteDetailActivity',
+    //       matches: '[text$="回复 翻译"][visibleToUser=true]',
+    //       snapshotUrls: 'https://i.gkd.li/i/26643975',
+    //       exampleUrls: 'https://e.gkd.li/fc8d70d4-f743-45df-a9d2-f343e419ccd9',
+    //     },
+    //   ],
+    // },
   ],
 });
